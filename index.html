@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ನಮ್ಮ ಕೆಲಸ</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+header{
+background:#0033cc;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+background:orange;
+border:none;
+border-radius:10px;
+margin:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff9900;
+}
+
+input{
+width:300px;
+padding:10px;
+font-size:16px;
+}
+
+#result{
+margin-top:40px;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🏠 ನಮ್ಮ ಕೆಲಸ</h1>
+
+<p>ಹಾಸನ ಜಿಲ್ಲೆಯ ವಿಶ್ವಾಸಾರ್ಹ ಕೆಲಸಗಾರರನ್ನು ಹುಡುಕಿ</p>
+
+</header>
+
+<div style="text-align:center;margin-top:40px;">
+
+<h2>ನೀವು ಯಾರು?</h2>
+
+<button onclick="showWorker()">
+👤 ಕೆಲಸ ಹುಡುಕುತ್ತಿದ್ದೇನೆ
+</button>
+
+<button onclick="showOwner()">
+🏠 ಕೆಲಸಗಾರ ಬೇಕು
+</button>
+
+</div>
+
+<div id="result"></div>
+
+<script>
+
+function showWorker(){
+
+document.getElementById("result").innerHTML=`
+
+<h2>ಕೆಲಸ ಹುಡುಕುವವರ ಮಾಹಿತಿ</h2>
+
+<input type="text" placeholder="ಹೆಸರು"><br><br>
+
+<input type="tel" placeholder="ಮೊಬೈಲ್ ಸಂಖ್ಯೆ"><br><br>
+
+<input type="text" placeholder="ಜಿಲ್ಲೆ"><br><br>
+
+<input type="text" placeholder="ಯಾವ ಕೆಲಸ ಬೇಕು"><br><br>
+
+<button onclick="submitForm()">Submit</button>
+
+`;
+
+}
+
+function showOwner(){
+
+document.getElementById("result").innerHTML=`
+
+<h2>ಕೆಲಸ ನೀಡುವವರ ಮಾಹಿತಿ</h2>
+
+<input type="text" placeholder="ಹೆಸರು"><br><br>
+
+<input type="tel" placeholder="ಮೊಬೈಲ್ ಸಂಖ್ಯೆ"><br><br>
+
+<input type="text" placeholder="ಯಾವ ಕೆಲಸಗಾರ ಬೇಕು"><br><br>
+
+<input type="text" placeholder="ಸಂಬಳ"><br><br>
+
+<button onclick="submitForm()">Submit</button>
+
+`;
+
+}
+
+function submitForm(){
+
+alert("Form Submitted Successfully");
+
+}
+
+</script>
+
+</body>
+
+</html>
