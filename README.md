@@ -1,2 +1,0 @@
-# namma-kelasa
-new project
