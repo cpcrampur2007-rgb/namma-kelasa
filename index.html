@@ -114,13 +114,18 @@ document.getElementById("result").innerHTML=`
 <input type="text" placeholder="ಸಂಬಳ"><br><br>
 
 <button onclick="submitForm()">Submit</button>
+<br><br>
+
+<button onclick="adminLogin()" style="background:#28a745;">
+    🔐 Admin Login
+</button>
 
 `;
 
 }
 
 function submitForm(){
-    
+
 const data = {
 type: document.querySelector("h2").innerText,
 name: document.querySelectorAll("input")[0].value,
@@ -144,6 +149,18 @@ body:JSON.stringify(data)
 alert("ಮಾಹಿತಿ ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ.");
 
 });
+
+}
+function adminLogin() {
+
+    let username = prompt("Enter Username");
+    let password = prompt("Enter Password");
+
+    if(username=="admin" && password=="1234"){
+        window.location.href="admin.html";
+    }else{
+        alert("Wrong Username or Password");
+    }
 
 }
 
