@@ -6,7 +6,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ನಮ್ಮ ಕೆಲಸ</title>
+<header>
+    <h1 id="title">🏠 ನಮ್ಮ ಕೆಲಸ</h1>
 
+    <select id="language" onchange="changeLanguage()">
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+    </select>
+</header>
+    function changeLanguage(){
+
+let lang = document.getElementById("language").value;
+
+if(lang=="kn"){
+
+document.getElementById("title").innerHTML="🏠 ನಮ್ಮ ಕೆಲಸ";
+
+}
+
+else if(lang=="en"){
+
+document.getElementById("title").innerHTML="🏠 Namma Kelasa";
+
+}
+
+else if(lang=="hi"){
+
+document.getElementById("title").innerHTML="🏠 नम्मा केलसा";
+
+}
+
+}
 <style>
 
 body{
