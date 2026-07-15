@@ -120,8 +120,30 @@ document.getElementById("result").innerHTML=`
 }
 
 function submitForm(){
+    
+const data = {
+type: document.querySelector("h2").innerText,
+name: document.querySelectorAll("input")[0].value,
+mobile: document.querySelectorAll("input")[1].value,
+district: document.querySelectorAll("input")[2].value,
+work: document.querySelectorAll("input")[3].value
+};
 
-alert("Form Submitted Successfully");
+fetch("https://script.google.com/macros/s/AKfycbxPWKjkcIPOt1l57qs6sgb2dvkXAQQqkbNWRJ35oWS9hlHUurG5Gpg1lPVylJrbM5rX/exec", {
+
+method:"POST",
+
+body:JSON.stringify(data)
+
+})
+
+.then(res=>res.text())
+
+.then(msg=>{
+
+alert("ಮಾಹಿತಿ ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ.");
+
+});
 
 }
 
