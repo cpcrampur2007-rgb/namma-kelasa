@@ -4,7 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Namma Kelasa - Admin Panel</title>
+<header>
+    <h1 id="title">🏠 NAMMA KELASA ADMIN PANEL</h1>
 
+    <div style="margin-top:15px;">
+        🌐
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+    </div>
+</header>
 <style>
 
 body{
@@ -234,8 +245,27 @@ document.getElementById("password").value="";
 
 }
 
-</script>
+<script>
 
+function changeLanguage(){
+
+    let lang = document.getElementById("language").value;
+
+    if(lang=="en"){
+        document.getElementById("title").innerHTML="🏠 NAMMA KELASA ADMIN PANEL";
+    }
+
+    else if(lang=="kn"){
+        document.getElementById("title").innerHTML="🏠 ನಮ್ಮ ಕೆಲಸ ಆಡ್ಮಿನ್ ಪ್ಯಾನಲ್";
+    }
+
+    else if(lang=="hi"){
+        document.getElementById("title").innerHTML="🏠 नम्मा केलसा एडमिन पैनल";
+    }
+
+}
+
+</script>
 </body>
 
 </html>  
