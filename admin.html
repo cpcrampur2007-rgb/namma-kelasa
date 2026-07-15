@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Namma Kelasa - Admin Panel</title>
 <header>
-    <h1 id="title">🏠 NAMMA KELASA ADMIN PANEL</h1>
 
-    <div style="margin-top:15px;">
-        🌐
-        <select id="language" onchange="changeLanguage()">
-            <option value="en">English</option>
-            <option value="kn">ಕನ್ನಡ</option>
-            <option value="hi">हिन्दी</option>
-        </select>
-    </div>
+<h1 id="title">🏠 NAMMA KELASA ADMIN PANEL</h1>
+
+<h2 id="welcome">Welcome Admin</h2>
+
+<select id="language" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="kn">ಕನ್ನಡ</option>
+    <option value="hi">हिन्दी</option>
+</select>
+
 </header>
 <style>
 
@@ -84,7 +85,7 @@ background:#0033cc;
 color:white;
 }
 
-#search{
+#search{<input id="search" type="text" placeholder="Search Name / Mobile">
 width:300px;
 padding:10px;
 margin:20px 0;
@@ -242,7 +243,7 @@ document.getElementById("loginBox").style.display="block";
 document.getElementById("username").value="";
 
 document.getElementById("password").value="";
-
+<button id="logoutBtn" onclick="logout()">Logout</button>
 }
 
 <script>
