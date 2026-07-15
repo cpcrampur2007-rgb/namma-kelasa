@@ -7,9 +7,6 @@
 <header>
 
 <h1 id="title">🏠 NAMMA KELASA ADMIN PANEL</h1>
-
-<h2 id="welcome">Welcome Admin</h2>
-
 <select id="language" onchange="changeLanguage()">
     <option value="en">English</option>
     <option value="kn">ಕನ್ನಡ</option>
@@ -118,7 +115,7 @@ margin:20px 0;
 
 <div id="dashboard">
 
-<h2>Welcome Admin</h2>
+<h2 id="welcome">Welcome Admin</h2>
 
 <input id="search" placeholder="Search Name / Mobile" onkeyup="searchTable()">
 
@@ -147,7 +144,7 @@ margin:20px 0;
 
 <br>
 
-<button onclick="logout()">Logout</button>
+<button id="logoutBtn" onclick="logout()">Logout</button>
 
 </div>
 
@@ -234,7 +231,38 @@ row.style.display="none";
 
 }
 
-function logout(){
+function logout()function changeLanguage() {
+
+    let lang = document.getElementById("language").value;
+
+    if(lang=="en"){
+
+        document.getElementById("title").innerHTML="🏠 NAMMA KELASA ADMIN PANEL";
+        document.getElementById("welcome").innerHTML="Welcome Admin";
+        document.getElementById("search").placeholder="Search Name / Mobile";
+        document.getElementById("logoutBtn").innerHTML="Logout";
+
+    }
+
+    else if(lang=="kn"){
+
+        document.getElementById("title").innerHTML="🏠 ನಮ್ಮ ಕೆಲಸ ಆಡ್ಮಿನ್ ಪ್ಯಾನಲ್";
+        document.getElementById("welcome").innerHTML="ಸ್ವಾಗತ ಆಡ್ಮಿನ್";
+        document.getElementById("search").placeholder="ಹೆಸರು / ಮೊಬೈಲ್ ಹುಡುಕಿ";
+        document.getElementById("logoutBtn").innerHTML="ಹೊರನಡೆ";
+
+    }
+
+    else if(lang=="hi"){
+
+        document.getElementById("title").innerHTML="🏠 नम्मा केलसा एडमिन पैनल";
+        document.getElementById("welcome").innerHTML="स्वागत एडमिन";
+        document.getElementById("search").placeholder="नाम / मोबाइल खोजें";
+        document.getElementById("logoutBtn").innerHTML="लॉगआउट";
+
+    }
+
+}{
 
 document.getElementById("dashboard").style.display="none";
 
